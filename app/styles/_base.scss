@@ -1,0 +1,264 @@
+.smd-datepicker {
+  background: #fff;
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.25);
+  width: 280px;
+  font-family: sans-serif;
+  margin: 0 auto; }
+  .smd-datepicker .header {
+    font-size: 13px;
+    height: 32px;
+    line-height: 32px;
+    background-color: #0097a7;
+    color: #ffffff;
+    border-radius: 2px 2px 0 0;
+    text-align: center; }
+  .smd-datepicker .display-date {
+    padding: 16px 0;
+    background-color: #00bcd4;
+    color: #ffffff;
+    text-align: center; }
+    .smd-datepicker .display-date .month {
+      font-size: 22px;
+      line-height: 24px;
+      height: 24px;
+      text-transform: uppercase; }
+    .smd-datepicker .display-date .day {
+      margin: 6px 0;
+      line-height: 58px;
+      height: 58px;
+      font-size: 58px; }
+    .smd-datepicker .display-date .year {
+      font-size: 22px;
+      line-height: 24px;
+      height: 24px;
+      text-transform: uppercase; }
+    .smd-datepicker .display-date .time i {
+      margin-right: 5px; }
+  .smd-datepicker .toolbar {
+    position: relative;
+    height: 48px;
+    text-align: center; }
+    .smd-datepicker .toolbar .title {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      line-height: 48px; }
+    .smd-datepicker .toolbar .toolbar-button {
+      position: absolute;
+      padding: 12px;
+      width: 48px;
+      height: 48px; }
+      .smd-datepicker .toolbar .toolbar-button:hover {
+        cursor: pointer; }
+      .smd-datepicker .toolbar .toolbar-button.left {
+        left: 0;
+        top: 0; }
+      .smd-datepicker .toolbar .toolbar-button.right {
+        right: 0;
+        top: 0; }
+  .smd-datepicker .week {
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 12px;
+    padding: 0 14px; }
+    .smd-datepicker .week::before {
+      content: " ";
+      display: table; }
+    .smd-datepicker .week .day {
+      list-style: none;
+      float: left;
+      width: 32px;
+      text-align: center;
+      margin: 0 2px; }
+  .smd-datepicker .calendar-month {
+    line-height: 32px;
+    text-align: center;
+    padding: 8px 14px 0 14px;
+    background-color: #ffffff;
+    overflow: hidden;
+    height: 100%; }
+  .smd-datepicker .month-week {
+    overflow: hidden;
+    height: 100%; }
+  .smd-datepicker .day-button {
+    position: relative;
+    float: left;
+    width: 36px;
+    line-height: 32px;
+    padding: 4px 2px;
+    border: 0;
+    background: none;
+    cursor: pointer; }
+    .smd-datepicker .day-button .label {
+      position: relative;
+      color: #000; }
+    .smd-datepicker .day-button:focus {
+      outline: none; }
+  .smd-datepicker .day-button .selected {
+    position: absolute;
+    background-color: #0097a7;
+    height: 32px;
+    width: 32px;
+    opacity: 0;
+    border-radius: 50%;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    left: 50%;
+    margin-left: -16px; }
+  .smd-datepicker .day-button.is-current-day {
+    color: #fff; }
+    .smd-datepicker .day-button.is-current-day .label {
+      color: #fff; }
+  .smd-datepicker .day-button.is-current-day .selected {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  .smd-datepicker .window-actions {
+    text-align: right;
+    padding: 10px; }
+    .smd-datepicker .window-actions div {
+      display: inline-block;
+      margin-right: 8px;
+      color: #00bcd4;
+      transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+      font-size: 14px;
+      padding-top: 5px;
+      margin-bottom: 15px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      font-weight: 500;
+      border-radius: 2px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      position: relative;
+      overflow: hidden;
+      background-color: #ffffff;
+      line-height: 36px;
+      min-width: 88px;
+      padding: 0;
+      margin: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      text-align: center; }
+      .smd-datepicker .window-actions div:hover {
+        background-color: #defbff; }
+  .smd-datepicker .time-selector {
+    height: 100%;
+    overflow: hidden;
+    padding: 40px; }
+    .smd-datepicker .time-selector .time {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 30px;
+      margin-right: 10px; }
+    .smd-datepicker .time-selector .hour, .smd-datepicker .time-selector .minute {
+      font-size: 40px;
+      margin-top: 5px;
+      text-align: center; }
+    .smd-datepicker .time-selector .control {
+      margin-left: 10px; }
+  .smd-datepicker .month-view, .smd-datepicker .year-view {
+    height: 100%;
+    overflow: hidden; }
+    .smd-datepicker .month-view .datetime-picker-button, .smd-datepicker .year-view .datetime-picker-button {
+      float: left;
+      width: 25%;
+      text-align: center;
+      margin-bottom: 10px; }
+      .smd-datepicker .month-view .datetime-picker-button span, .smd-datepicker .year-view .datetime-picker-button span {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+        line-height: 40px;
+        border-radius: 6px; }
+      .smd-datepicker .month-view .datetime-picker-button.selected span, .smd-datepicker .year-view .datetime-picker-button.selected span {
+        background-color: #0097a7;
+        color: #fff; }
+
+  .is-portrait .smd-datepicker .header {
+    display: none; }
+  .is-portrait .smd-datepicker .display-date {
+    padding: 5px 0; }
+  .is-portrait .smd-datepicker .display-date .month {
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle; }
+  .is-portrait .smd-datepicker .display-date .year {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px; }
+  .is-portrait .smd-datepicker .display-date .day {
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle; }
+  .is-portrait .smd-datepicker .toolbar {
+    height: 30px; }
+  .is-portrait .smd-datepicker .day-button {
+    line-height: 28px; }
+  .is-portrait .smd-datepicker .day-button .selected {
+    width: 30px;
+    height: 30px;
+    margin-left: -15px; }
+  .is-landscape .smd-datepicker {
+    width: 450px;
+    position: relative; }
+    .is-landscape .smd-datepicker .header {
+      display: block; }
+    .is-landscape .smd-datepicker .calendar {
+      height: 100%;
+      overflow: hidden;
+      width: auto; }
+    .is-landscape .smd-datepicker .date-display {
+      float: left;
+      width: 160px; }
+    .is-landscape .smd-datepicker .calendar-container {
+      float: left; }
+    .is-landscape .smd-datepicker .window-actions {
+      position: absolute;
+      bottom: 0;
+      left: 30px; }
+      .is-landscape .smd-datepicker .window-actions div {
+        display: block; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+h1 i {
+  margin-right: 10px; }
+
+a {
+  color: #0097a7; }
+
+.content {
+  padding: 20px; }
+
+.note {
+  margin-bottom: 400px; }
+
+.notes {
+  font-style: italic;
+  font-size: 13px; }
+
+.date-selector {
+  border: 1px solid #ccc;
+  padding: 40px;
+  margin-bottom: 40px; }
+  .date-selector h2 {
+    font-size: 18px; }
+  .date-selector input {
+    font-size: 16px;
+    padding: 10px 5px; }
