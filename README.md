@@ -1,11 +1,11 @@
-# material-design--datepicker
+# ember-sauce-material-design-datepicker
 
 This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd material-design--datepicker`
+* `cd ember-sauce-material-design-datepicker`
 * `npm install`
 * `bower install`
 

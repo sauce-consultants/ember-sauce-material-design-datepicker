@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'material-design--datepicker'
+  name: 'ember-sauce-material-design-datepicker'
 };
