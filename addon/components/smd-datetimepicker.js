@@ -142,7 +142,7 @@ export default Ember.Component.extend({
     changeHour: function(delta) {
 
       var newDate = DateTime.clone(get(this, '_selectedDate'));
-      newDate.setHours(newDate.getHours() + delta);
+      newDate.setHours(delta);
 
       this.setProperties({
         _selectedDate: newDate
@@ -153,7 +153,7 @@ export default Ember.Component.extend({
     changeMinute: function(delta) {
 
       var newDate = DateTime.clone(get(this, '_selectedDate'));
-      newDate.setMinutes(newDate.getMinutes() + delta);
+      newDate.setMinutes(delta);
 
       set(this, '_selectedDate', newDate);
 

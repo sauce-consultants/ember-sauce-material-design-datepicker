@@ -1,0 +1,19 @@
+.time-column {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+.time-options {
+  height: 250px;
+  overflow-x: scroll;
+}
+
+  .time-option {
+    height: 30px;
+    // width: 30px;
+  }
+
+    .time-column__title {
+      margin-bottom: 18px;
+    }

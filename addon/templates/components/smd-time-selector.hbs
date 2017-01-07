@@ -1,17 +1,21 @@
-<div class="time">
-  <div {{action 'changeHour' 1}} class="control">U</div>
-  <div class="hour">{{selectedHour}}</div>
-  <div {{action 'changeHour' -1}} class="control">D</div>
+<div class="time-column">
+  <div class="time-column__title title">Hour</div>
+  <div class="time-options">
+    {{#each hours as |hour|}}
+      <div class="time-option">
+        {{ smd-selector-button label=hour action='setHour' params=hour for=this }}
+      </div>
+    {{/each}}
+  </div>
 </div>
 
-<div class="time">:</div>
-
-<div class="time">
-  <div {{action 'changeMinute' 1}} class="control">U</div>
-  <div class="minute">{{selectedMinute}}</div>
-  <div {{action 'changeMinute' -1}} class="control">D</div>
-</div>
-
-<div class="time">
-  <div {{action 'changePeriod'}} class="period">{{selectedPeriod}}</div>
+<div class="time-column">
+  <div class="time-column__title title">Minute</div>
+  <div class="time-options">
+    {{#each minutes as |minute|}}
+      <div class="time-option">
+        {{ smd-selector-button label=minute action='setMinute' params=minute for=this }}
+      </div>
+    {{/each}}
+  </div>
 </div>

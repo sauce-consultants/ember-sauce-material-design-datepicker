@@ -157,7 +157,7 @@
   .smd-datepicker .smd-time-selector {
     height: 100%;
     overflow: hidden;
-    padding: 40px; }
+    padding: 14px; }
     .smd-datepicker .smd-time-selector .time {
       display: inline-block;
       vertical-align: middle;
@@ -186,6 +186,33 @@
       .smd-datepicker .smd-month-selector .datetime-picker-button.selected span, .smd-datepicker .smd-year-selector .datetime-picker-button.selected span {
         background-color: #0097a7;
         color: #fff; }
+
+        .smd-datepicker .datetime-picker-button {
+          position: relative;
+          // float: left;
+          width: 36px;
+          line-height: 32px;
+          padding: 4px 2px;
+          border: 0;
+          background: none;
+          cursor: pointer; }
+          .smd-datepicker .datetime-picker-button .label {
+            position: relative;
+            color: #000; }
+          .smd-datepicker .datetime-picker-button:focus {
+            outline: none; }
+        .smd-datepicker .datetime-picker-button .selected {
+          position: absolute;
+          background-color: #0097a7;
+          height: 32px;
+          width: 32px;
+          opacity: 0;
+          border-radius: 50%;
+          -webkit-transform: scale(0);
+          transform: scale(0);
+          transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+          left: 50%;
+          margin-left: -16px; }
 
   .is-portrait .smd-datepicker .header {
     display: none; }

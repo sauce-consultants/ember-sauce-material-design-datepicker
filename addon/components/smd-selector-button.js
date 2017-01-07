@@ -8,7 +8,7 @@ export default Ember.Component.extend(Setup, {
 
   layout: layout,
 
-  tagName: 'div',
+  tagName: 'button',
   classNames: ['datetime-picker-button'],
   classNameBindings: ['selected'],
 

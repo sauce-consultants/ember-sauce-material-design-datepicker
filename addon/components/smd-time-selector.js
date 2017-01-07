@@ -15,6 +15,16 @@ export default Ember.Component.extend(Setup, {
   tagName: 'div',
   classNames: ['smd-time-selector'],
 
+  hours: [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23
+  ],
+
+  minutes: [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,
+    25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46,
+    47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59
+  ],
+
   setSelected: observer('parent._selectedDate', function(){
 
     var date = get(this, 'parent._selectedDate');
@@ -35,12 +45,12 @@ export default Ember.Component.extend(Setup, {
 
   actions: {
 
-    changeHour: function(delta) {
-      get(this, 'parent').send('changeHour', delta);
+    setHour: function(value) {
+      get(this, 'parent').send('changeHour', value);
     },
 
-    changeMinute: function(delta) {
-      get(this, 'parent').send('changeMinute', delta);
+    setMinute: function(value) {
+      get(this, 'parent').send('changeMinute', value);
     },
 
     changePeriod: function() {
