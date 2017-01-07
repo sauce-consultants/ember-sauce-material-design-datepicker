@@ -198,7 +198,7 @@ export default Ember.Component.extend({
         var previousState = get(this, '_previousState');
         set(this, '_currentState', previousState);
       } else {
-        this.changeState('selectTime');
+        this.changeState('showTimeSelector');
       }
     }
 
@@ -219,11 +219,11 @@ export default Ember.Component.extend({
       case 'selectMonth':
         set(this, 'showMonthSelector', true);
         break;
-      case 'showCalendarPanel':
-        set(this, 'showCalendarPanel', true);
+      case 'selectYear':
+        set(this, 'showYearSelector', true);
         break;
-      case 'showCalendarPanel':
-        set(this, 'showCalendarPanel', true);
+      case 'selectTime':
+        set(this, 'showTimeSelector', true);
         break;
     }
 

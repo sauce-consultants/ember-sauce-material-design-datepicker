@@ -32,10 +32,6 @@ export default Ember.Component.extend(Setup, {
 
     toggleMonthSelector: function() {
       get(this, 'parent').send('toggleMonthSelector');
-    },
-
-    navAction: function(test) {
-  
     }
 
   }
