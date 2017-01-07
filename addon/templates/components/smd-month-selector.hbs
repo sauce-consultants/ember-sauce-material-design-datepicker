@@ -1,1 +1,18 @@
-Month.
+{{smd-calendar-toolbar
+  toggleAction='toggleMonthSelector'
+  navAction='changeYear'
+  label=year
+}}
+
+{{selectedMonth}}
+
+{{#each months as |month|}}
+
+  {{smd-selector-button
+    for=this
+    label=month.name
+    selected=month.isSelected
+    action='setMonth'
+    params=month
+  }}
+{{/each}}

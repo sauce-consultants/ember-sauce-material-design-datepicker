@@ -107,7 +107,7 @@ export default Ember.Component.extend({
         _weekCount: DateTime.getWeekArray(newDate),
       });
 
-      this.changeState('default');
+      this.changeState('showCalendarPanel');
     },
 
     changeMonth: function(delta) {
@@ -184,7 +184,6 @@ export default Ember.Component.extend({
     },
 
     toggleMonthView: function() {
-      alert('test');
       this.changeState('selectMonth');
     },
 

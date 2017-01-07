@@ -35,7 +35,7 @@ export default Ember.Component.extend(Setup, {
     },
 
     navAction: function(test) {
-      alert('click');
+  
     }
 
   }
