@@ -1,1 +1,1 @@
-export { default } from 'ember-sauce-material-design-datepicker/components/smd-year-selector';
+export { default } from 'ember-sauce-material-design-datepicker/components/smd-time-selector';

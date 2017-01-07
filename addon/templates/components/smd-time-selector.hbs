@@ -1,1 +1,17 @@
-Time.
+<div class="time">
+  <div {{action 'changeHour' 1}} class="control">U</div>
+  <div class="hour">{{selectedHour}}</div>
+  <div {{action 'changeHour' -1}} class="control">D</div>
+</div>
+
+<div class="time">:</div>
+
+<div class="time">
+  <div {{action 'changeMinute' 1}} class="control">U</div>
+  <div class="minute">{{selectedMinute}}</div>
+  <div {{action 'changeMinute' -1}} class="control">D</div>
+</div>
+
+<div class="time">
+  <div {{action 'changePeriod'}} class="period">{{selectedPeriod}}</div>
+</div>

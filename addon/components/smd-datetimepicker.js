@@ -192,13 +192,10 @@ export default Ember.Component.extend({
     },
 
     toggleTimeSelector: function() {
-      var _this = this;
-      var currentState = get(this, '_currentState');
-      if(currentState === 'selectTime') {
-        var previousState = get(this, '_previousState');
-        set(this, '_currentState', previousState);
+      if(get(this, 'showTimeSelector')) {
+        this.changeState('showCalendarPanel');
       } else {
-        this.changeState('showTimeSelector');
+        this.changeState('selectTime');
       }
     }
 
@@ -223,6 +220,7 @@ export default Ember.Component.extend({
         set(this, 'showYearSelector', true);
         break;
       case 'selectTime':
+
         set(this, 'showTimeSelector', true);
         break;
     }
