@@ -1,103 +1,28 @@
-<div class="smd-datepicker">
-  <div class="calendar">
+<div class="calendar">
 
-    <div class="date-display">
-
-      <div class="header">
-        <span>Thursday</span>
-      </div>
-
-      <div class="display-date">
-        <div class="month">Feb</div>
-        <div class="day">12</div>
-        <div class="year">2017</div>
-        <div class="time"><i class="fa fa-clock-o" aria-hidden="true"></i>9:49 pm</div>
-      </div>
-
+  <div class="date-display">
+    <div class="header">
+      <span>{{selectedDate}}</span>
     </div>
 
-    <div class="calendar-container">
-      <div class="toolbar">
-        <div class="title">February 2017</div>
-
-        <div class="toolbar-button left">
-          <svg class="mui-svg-icon" viewBox="0 0 24 24">
-            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
-          </svg>
-        </div>
-
-        <div class="toolbar-button right">
-          <svg class="mui-svg-icon" viewBox="0 0 24 24">
-            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
-          </svg>
-        </div>
-      </div>
-
-      <ul class="week">
-        <li class="day">S</li>
-        <li class="day">M</li>
-        <li class="day">T</li>
-        <li class="day">W</li>
-        <li class="day">T</li>
-        <li class="day">F</li>
-        <li class="day">S</li>
-      </ul>
-
-      <div class="month">
-        <div class="calendar-month">
-          <div class="month-week">
-            <span class="day-button"></span>
-            <span class="day-button"></span>
-            <span class="day-button"></span>
-            <button class="day-button"><!----><span class="label">1</span></button>
-            <button class="day-button"><!----><span class="label">2</span></button>
-            <button class="day-button"><!----><span class="label">3</span></button>
-            <button class="day-button"><!----><span class="label">4</span></button>
-          </div>
-          <div class="month-week">
-            <button class="day-button"><!----><span class="label">5</span></button>
-            <button class="day-button"><!----><span class="label">6</span></button>
-            <button class="day-button"><!----><span class="label">7</span></button>
-            <button class="day-button"><!----><span class="label">8</span></button>
-            <button class="day-button is-current-day"><!----><span class="selected"></span><span class="label">9</span></button>
-            <button class="day-button"><!----><span class="label">10</span></button>
-            <button class="day-button"><!----><span class="label">11</span></button>
-          </div>
-          <div class="month-week">
-            <button class="day-button"><!----><span class="label">12</span></button>
-            <button class="day-button"><!----><span class="label">13</span></button>
-            <button class="day-button"><!----><span class="label">14</span></button>
-            <button class="day-button"><!----><span class="label">15</span></button>
-            <button class="day-button"><!----><span class="label">16</span></button>
-            <button class="day-button"><!----><span class="label">17</span></button>
-            <button class="day-button"><!----><span class="label">18</span></button>
-          </div>
-          <div class="month-week">
-            <button class="day-button"><!----><span class="label">19</span></button>
-            <button class="day-button"><!----><span class="label">20</span></button>
-            <button class="day-button"><!----><span class="label">21</span></button>
-            <button class="day-button"><!----><span class="label">22</span></button>
-            <button class="day-button"><!----><span class="label">23</span></button>
-            <button class="day-button"><!----><span class="label">24</span></button>
-            <button class="day-button"><!----><span class="label">25</span></button>
-          </div>
-          <div class="month-week">
-            <button class="day-button"><!----><span class="label">26</span></button>
-            <button class="day-button"><!----><span class="label">27</span></button>
-            <button class="day-button"><!----><span class="label">28</span></button>
-            <span class="day-button"></span>
-            <span class="day-button"></span>
-            <span class="day-button"></span>
-            <span class="day-button"></span>
-          </div>
-        </div>
-      </div>
+    <div class="display-date">
+      <div class="month">{{selectedMonth}}</div>
+      <div class="day">{{selectedDay}}</div>
+      <div class="year">{{selectedYear}}</div>
+      {{#if showTime}}
+        <div class="time" {{action 'toggleTimeSelector'}}>{{selectedTime}}</div>
+      {{/if}}
     </div>
-
   </div>
 
-  <div class="window-actions">
-    <div>Cancel</div>
-    <div>Ok</div>
-  </div>
+  {{#if showCalendarPanel}}
+    {{ smd-calendar-panel toggleAction='toggleMonthView' navAction='changeMonth' }}
+  {{/if}}
+
+
+</div>
+
+<div class="window-actions">
+  <div>Cancel</div>
+  <div>Ok</div>
 </div>

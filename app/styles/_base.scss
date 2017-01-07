@@ -71,7 +71,7 @@
       width: 32px;
       text-align: center;
       margin: 0 2px; }
-  .smd-datepicker .calendar-month {
+  .smd-datepicker .smd-calendar-month {
     line-height: 32px;
     text-align: center;
     padding: 8px 14px 0 14px;
@@ -222,7 +222,7 @@
     .is-landscape .smd-datepicker .date-display {
       float: left;
       width: 160px; }
-    .is-landscape .smd-datepicker .calendar-container {
+    .is-landscape .smd-datepicker .calendar-panel {
       float: left; }
     .is-landscape .smd-datepicker .window-actions {
       position: absolute;

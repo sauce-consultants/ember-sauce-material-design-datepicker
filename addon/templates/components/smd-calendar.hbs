@@ -1,0 +1,13 @@
+{{#if weekCount}}
+  {{#each weekCount as |week|}}
+    <div class="month-week">
+      {{#each week as |day|}}
+        {{#if day}}
+          {{smd-date-button date=day}}
+        {{else}}
+          <span class="day-button"></span>
+        {{/if}}
+      {{/each}}
+    </div>
+  {{/each}}
+{{/if}}
