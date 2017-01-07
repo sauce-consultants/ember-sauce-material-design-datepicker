@@ -3,7 +3,15 @@
   box-shadow: 0 14px 45px rgba(0, 0, 0, 0.25);
   width: 280px;
   font-family: sans-serif;
-  margin: 0 auto; }
+  margin: 0 auto;
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+}
   .smd-datepicker .header {
     font-size: 13px;
     height: 32px;
@@ -146,36 +154,36 @@
       text-align: center; }
       .smd-datepicker .window-actions div:hover {
         background-color: #defbff; }
-  .smd-datepicker .time-selector {
+  .smd-datepicker .smd-time-selector {
     height: 100%;
     overflow: hidden;
     padding: 40px; }
-    .smd-datepicker .time-selector .time {
+    .smd-datepicker .smd-time-selector .time {
       display: inline-block;
       vertical-align: middle;
       font-size: 30px;
       margin-right: 10px; }
-    .smd-datepicker .time-selector .hour, .smd-datepicker .time-selector .minute {
+    .smd-datepicker .smd-time-selector .hour, .smd-datepicker .smd-time-selector .minute {
       font-size: 40px;
       margin-top: 5px;
       text-align: center; }
-    .smd-datepicker .time-selector .control {
+    .smd-datepicker .smd-time-selector .control {
       margin-left: 10px; }
-  .smd-datepicker .month-view, .smd-datepicker .year-view {
+  .smd-datepicker .smd-month-selector, .smd-datepicker .smd-year-selector {
     height: 100%;
     overflow: hidden; }
-    .smd-datepicker .month-view .datetime-picker-button, .smd-datepicker .year-view .datetime-picker-button {
+    .smd-datepicker .smd-month-selector .datetime-picker-button, .smd-datepicker .smd-year-selector .datetime-picker-button {
       float: left;
       width: 25%;
       text-align: center;
       margin-bottom: 10px; }
-      .smd-datepicker .month-view .datetime-picker-button span, .smd-datepicker .year-view .datetime-picker-button span {
+      .smd-datepicker .smd-month-selector .datetime-picker-button span, .smd-datepicker .smd-year-selector .datetime-picker-button span {
         width: 80%;
         display: block;
         margin: 0 auto;
         line-height: 40px;
         border-radius: 6px; }
-      .smd-datepicker .month-view .datetime-picker-button.selected span, .smd-datepicker .year-view .datetime-picker-button.selected span {
+      .smd-datepicker .smd-month-selector .datetime-picker-button.selected span, .smd-datepicker .smd-year-selector .datetime-picker-button.selected span {
         background-color: #0097a7;
         color: #fff; }
 

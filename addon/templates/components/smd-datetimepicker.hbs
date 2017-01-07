@@ -19,6 +19,17 @@
     {{ smd-calendar-panel toggleAction='toggleMonthView' navAction='changeMonth' }}
   {{/if}}
 
+  {{#if showMonthSelector}}
+    {{ smd-month-selector }}
+  {{/if}}
+
+  {{#if showYearSelector}}
+    {{ smd-year-selector }}
+  {{/if}}
+
+  {{#if showTimeSelector}}
+    {{ smd-time-selector }}
+  {{/if}}
 
 </div>
 

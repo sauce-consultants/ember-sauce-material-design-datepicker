@@ -39,7 +39,7 @@ export default Ember.Component.extend({
   _prevMonth: null,
   _nextMonth: null,
 
-  _currentState: 'default',
+  _currentState: null,
 
   showCalendarPanel: true,
   showMonthSelector: false,
@@ -59,44 +59,6 @@ export default Ember.Component.extend({
 
   }),
 
-  componentPartial: computed('_currentState', function(){
-
-      var state = get(this, '_currentState');
-      var state = 'default';
-      var partial;
-
-      alert('test')
-
-
-      set(this, 'showCalendarPanel', false);
-      set(this, 'showMonthSelector', false);
-      set(this, 'showYearSelector', false);
-      set(this, 'showTimeSelector', false);
-
-      switch(state) {
-        case 'default':
-        alert('test')
-          set(this, 'showCalendarPanel', true);
-          partial = 'smd-calendar-panel';
-          break;
-        case 'selectMonth':
-          set(this, 'showMonthSelector', true);
-          partial = 'smd-month-selector';
-          break;
-        case 'selectYear':
-          set(this, 'showYearSelector', true);
-          partial = 'smd-year-selector';
-          break;
-        case 'selectTime':
-          set(this, 'showTimeSelector', true);
-          partial = 'smd-time-selector';
-          break;
-      }
-
-      return partial;
-
-  }),
-
   initialState: on('init', function(){
 
     var d = new Date();
@@ -106,8 +68,7 @@ export default Ember.Component.extend({
     this.setProperties({
       _displayDate: displayDate,
       _selectedDate: d,
-      _weekCount: DateTime.getWeekArray(displayDate),
-      _currentState: 'default'
+      _weekCount: DateTime.getWeekArray(displayDate)
     });
 
   }),
@@ -223,6 +184,7 @@ export default Ember.Component.extend({
     },
 
     toggleMonthView: function() {
+      alert('test');
       this.changeState('selectMonth');
     },
 
@@ -246,10 +208,25 @@ export default Ember.Component.extend({
   _previousState: null,
 
   changeState: function(state) {
+    set(this, 'showCalendarPanel', false);
+    set(this, 'showMonthSelector', false);
+    set(this, 'showYearSelector', false);
+    set(this, 'showTimeSelector', false);
 
-    var currentState = get(this, '_currentState');
-    set(this, '_previousState', currentState);
-    set(this, '_currentState', state);
+    switch (state) {
+      case 'showCalendarPanel':
+        set(this, 'showCalendarPanel', true);
+        break;
+      case 'selectMonth':
+        set(this, 'showMonthSelector', true);
+        break;
+      case 'showCalendarPanel':
+        set(this, 'showCalendarPanel', true);
+        break;
+      case 'showCalendarPanel':
+        set(this, 'showCalendarPanel', true);
+        break;
+    }
 
   }
 
