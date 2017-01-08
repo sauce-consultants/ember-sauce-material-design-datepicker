@@ -1,2 +1,92 @@
 @import 'base';
 @import 'time-selector';
+
+
+.calendar-icon {
+  float: left;
+  border: 0;
+  left: 0;
+  // background: white;
+  font-family: 'Material Icons';
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga" 1;
+  font-style: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 24px;
+  width: 56px;
+  // height: 56px;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+}
+
+  .calendar-icon::after {
+    content: 'grid_on';
+    color: #fff;
+  }
+
+
+  .clock-icon {
+    float: right;
+    border: 0;
+    left: 0;
+    // background: white;
+    font-family: 'Material Icons';
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "liga" 1;
+    font-style: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: 24px;
+    width: 56px;
+    // height: 56px;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+  }
+
+    .clock-icon::after {
+      content: 'access_time';
+      color: #fff;
+    }
+
+.smd-datepicker--selecting-date {
+  .month-day .month, .month-day .day, .year, .calendar-icon::after {
+    color: #fff;
+  }
+
+  .time-text, .clock-icon::after {
+    color: rgba( #fff, .7 );
+  }
+}
+
+
+.smd-datepicker--selecting-time {
+  .month-day .month, .month-day .day, .year, .calendar-icon::after {
+    color: rgba( #fff, .7 );
+  }
+
+  .time-text, .clock-icon::after {
+    color: #fff;
+  }
+}
+
+.time-bar {
+  margin-top: 36px;
+}
+.time-text {
+  margin-top: -5px;
+  font-size: 25px;
+  // margin-top: .2em;
+}
+
+.month-day .month, .year, .month-day .day {
+  font-size: 42px !important;
+}
+
+.month-day {
+  margin-bottom: 12px;
+}

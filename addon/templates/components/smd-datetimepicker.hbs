@@ -6,11 +6,19 @@
     </div>
 
     <div class="display-date">
-      <div class="month">{{selectedMonth}}</div>
-      <div class="day">{{selectedDay}}</div>
+      <div class="month-day">
+        <span class="month">{{selectedMonth}} </span>
+        <span class="day"> {{selectedDay}}</span>
+      </div>
       <div class="year">{{selectedYear}}</div>
       {{#if showTime}}
-        <div class="time" {{action 'toggleTimeSelector'}}>{{selectedTime}}</div>
+        <div class="time-bar">
+          <div class="calendar-icon" {{ action 'showCalendarPanel' }}></div>
+          <div class="time time-text" style="width: 60%; float: left;">{{selectedTime}}</div>
+          <div class="clock-icon" {{ action 'showTimeSelector' }}></div>
+
+          <div style="clear: both;"></div>
+        </div>
       {{/if}}
     </div>
   </div>

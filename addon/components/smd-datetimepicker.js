@@ -15,6 +15,7 @@ export default Ember.Component.extend({
 
   tagName: 'div',
   classNames: ['smd-datepicker'],
+  classNameBindings: ['isSelectingDate:smd-datepicker--selecting-date:smd-datepicker--selecting-time'],
 
   // delete me later
   selectedTime: computed('_selectedDate', function(){
@@ -23,10 +24,11 @@ export default Ember.Component.extend({
     var hours = d.getHours();
     var minutes = d.getMinutes();
     var ampm = hours >= 12 ? 'pm' : 'am';
-    hours = hours % 12;
-    hours = hours ? hours : 12;
+    // hours = hours % 12;
+    // hours = hours ? hours : 12;
     minutes = minutes < 10 ? '0'+minutes : minutes;
-    var strTime = hours + ':' + minutes + ' ' + ampm;
+    // var strTime = hours + ':' + minutes + ' ' + ampm;
+    var strTime = hours + ':' + minutes;
     return strTime;
 
   }),
@@ -45,6 +47,8 @@ export default Ember.Component.extend({
   showMonthSelector: false,
   showYearSelector: false,
   showTimeSelector: false,
+
+  isSelectingDate: true,
 
   setSelected: Ember.observer('_selectedDate', function(){
 
@@ -76,12 +80,10 @@ export default Ember.Component.extend({
   actions: {
 
     confirm: function() {
-      console.log('confirm');
       this.sendAction('confirmAction', get(this, '_selectedDate'));
     },
 
     cancel: function() {
-      console.log('cancel');
       this.sendAction('cancelAction');
     },
 
@@ -189,6 +191,16 @@ export default Ember.Component.extend({
 
     toggleMonthSelector: function() {
       this.changeState('selectYear');
+    },
+
+    showCalendarPanel: function() {
+      set(this, 'isSelectingDate', true);
+      this.changeState('showCalendarPanel');
+    },
+
+    showTimeSelector: function() {
+      set(this, 'isSelectingDate', false);
+      this.changeState('selectTime');
     },
 
     toggleTimeSelector: function() {
