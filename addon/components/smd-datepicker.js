@@ -53,6 +53,9 @@ export default Ember.Component.extend({
 
   selectedDateTime: null,
 
+  cancelText: "Cancel",
+  confirmText: "Confirm",
+
   setSelected: Ember.observer('_selectedDate', function(){
 
     var date = get(this, '_selectedDate');
