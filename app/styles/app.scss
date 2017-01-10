@@ -1,3 +1,4 @@
+@import 'settings';
 @import 'base';
 @import 'time-selector';
 
@@ -24,7 +25,7 @@
 
   .calendar-icon::after {
     content: 'grid_on';
-    color: #fff;
+    color: $icon-color;
   }
 
 
@@ -50,27 +51,27 @@
 
     .clock-icon::after {
       content: 'access_time';
-      color: #fff;
+      color: $icon-color;
     }
 
 .smd-datepicker--selecting-date {
   .month-day .month, .month-day .day, .year, .calendar-icon::after {
-    color: #fff;
+    color: $icon-color;
   }
 
   .time-text, .clock-icon::after {
-    color: rgba( #fff, .7 );
+    color: $secondary-color;
   }
 }
 
 
 .smd-datepicker--selecting-time {
   .month-day .month, .month-day .day, .year, .calendar-icon::after {
-    color: rgba( #fff, .7 );
+    color: $secondary-color;
   }
 
   .time-text, .clock-icon::after {
-    color: #fff;
+    color: $icon-color;
   }
 }
 

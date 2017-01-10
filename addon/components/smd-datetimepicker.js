@@ -50,6 +50,8 @@ export default Ember.Component.extend({
 
   isSelectingDate: true,
 
+  selectedDateTime: null,
+
   setSelected: Ember.observer('_selectedDate', function(){
 
     var date = get(this, '_selectedDate');
@@ -60,6 +62,8 @@ export default Ember.Component.extend({
       selectedDate: DateTime.getDayOfWeek(date),
       selectedYear: date.getFullYear()
     });
+
+    set(this, 'selectedDateTime', date);
 
   }),
 
