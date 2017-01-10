@@ -65,6 +65,7 @@
   display: block;
 clear: both;}
     .smd-datepicker .window-actions div {
+      cursor: pointer;
       display: inline-block;
       margin-right: 8px;
       color: $c-date-display;
@@ -123,7 +124,7 @@ clear: both;}
         border-radius: 6px; }
       .smd-datepicker .smd-month-selector .datetime-picker-button.selected span, .smd-datepicker .smd-year-selector .datetime-picker-button.selected span {
         background-color: $c-selected-date;
-        // color: $primary-text-color;
+        color: $c-selected-date-text;
       }
 
         .smd-datepicker .datetime-picker-button {
