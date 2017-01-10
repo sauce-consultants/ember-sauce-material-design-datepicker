@@ -125,7 +125,9 @@
     transform: scale(1); }
   .smd-datepicker .window-actions {
     text-align: right;
-    padding: 10px; }
+    padding: 10px;
+  display: block;
+clear: both;}
     .smd-datepicker .window-actions div {
       display: inline-block;
       margin-right: 8px;
@@ -247,24 +249,46 @@
     margin-left: -15px; }
   .is-landscape .smd-datepicker {
     width: 450px;
-    position: relative; }
+    position: relative;
+  display: flex;}
     .is-landscape .smd-datepicker .header {
-      display: block; }
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      display: block;}
     .is-landscape .smd-datepicker .calendar {
       height: 100%;
       overflow: hidden;
       width: auto; }
     .is-landscape .smd-datepicker .date-display {
-      float: left;
-      width: 160px; }
+      display: table-cell;
+      position: relative;
+      width: 160px;
+      top: 0;
+      bottom: 0;
+    }
+    .is-landscape .display-date {
+      top: 32px;
+      bottom: 0;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
     .is-landscape .smd-datepicker .calendar-panel {
       float: left; }
-    .is-landscape .smd-datepicker .window-actions {
-      position: absolute;
-      bottom: 0;
-      left: 30px; }
-      .is-landscape .smd-datepicker .window-actions div {
-        display: block; }
+
+      .is-landscape .smd-datepicker .calendar-display {
+        padding-left: 10px;
+        display: table-cell;
+      }
+    // .is-landscape .smd-datepicker .window-actions {
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 160px; }
+      // .is-landscape .smd-datepicker .window-actions div {
+      //   display: block; }
 
 html {
   box-sizing: border-box; }

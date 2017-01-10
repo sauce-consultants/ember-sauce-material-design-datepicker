@@ -91,3 +91,14 @@
 .month-day {
   margin-bottom: 12px;
 }
+
+.time-bar__icons {
+  display: absolute;
+  width: 100%;
+  background: red;
+
+  .calendar-icon {
+    position: absolute;
+    left: 0;
+  }
+}

@@ -13,35 +13,40 @@
       <div class="year">{{selectedYear}}</div>
       {{#if showTime}}
         <div class="time-bar">
-          <div class="calendar-icon" {{ action 'showCalendarPanel' }}></div>
           <div class="time time-text" style="width: 60%; float: left;">{{selectedTime}}</div>
-          <div class="clock-icon" {{ action 'showTimeSelector' }}></div>
 
+          <div class="time-bar__icons">
+            <div class="calendar-icon" {{ action 'showCalendarPanel' }}></div>
+            <div class="clock-icon" {{ action 'showTimeSelector' }}></div>
+          </div>
           <div style="clear: both;"></div>
         </div>
       {{/if}}
     </div>
   </div>
 
-  {{#if showCalendarPanel}}
-    {{ smd-calendar-panel toggleAction='toggleMonthView' navAction='changeMonth' }}
-  {{/if}}
+  <div class="calendar-display">
+    {{#if showCalendarPanel}}
+      {{ smd-calendar-panel toggleAction='toggleMonthView' navAction='changeMonth' }}
+    {{/if}}
 
-  {{#if showMonthSelector}}
-    {{ smd-month-selector }}
-  {{/if}}
+    {{#if showMonthSelector}}
+      {{ smd-month-selector }}
+    {{/if}}
 
-  {{#if showYearSelector}}
-    {{ smd-year-selector }}
-  {{/if}}
+    {{#if showYearSelector}}
+      {{ smd-year-selector }}
+    {{/if}}
 
-  {{#if showTimeSelector}}
-    {{ smd-time-selector }}
-  {{/if}}
+    {{#if showTimeSelector}}
+      {{ smd-time-selector }}
+    {{/if}}
 
-</div>
 
-<div class="window-actions">
-  <div>Cancel</div>
-  <div>Ok</div>
+    <div class="window-actions">
+      <div>Cancel</div>
+      <div>Ok</div>
+    </div>
+  </div>
+
 </div>
