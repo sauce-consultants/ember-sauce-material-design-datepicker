@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import layout from '../templates/components/smd-datetimepicker';
+import layout from '../templates/components/smd-datepicker';
 import DateTime from '../utils/date-time';
 
 const {

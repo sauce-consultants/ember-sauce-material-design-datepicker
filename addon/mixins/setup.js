@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import DateTimePicker from '../components/smd-datetimepicker';
+import DateTimePicker from '../components/smd-datepicker';
 
 var get = Ember.get;
 var set = Ember.set;
