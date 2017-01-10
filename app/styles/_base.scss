@@ -1,70 +1,6 @@
-.smd-datepicker {
-  background: $calendar-background;
-  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.25);
-  width: 280px;
-  font-family: sans-serif;
-  margin: 0 auto;
-  -webkit-user-select: none; /* Chrome/Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+ */
-
-  /* Rules below not implemented in browsers yet */
-  -o-user-select: none;
-  user-select: none;
+.calendar {
+  width: 100%;
 }
-  .smd-datepicker .header {
-    font-size: 13px;
-    height: 32px;
-    line-height: 32px;
-    background-color: $primary-color-dark;
-    color: $header-color;
-    border-radius: 2px 2px 0 0;
-    text-align: center; }
-  .smd-datepicker .display-date {
-    padding: 16px 0;
-    background-color: $primary-color;
-    text-align: center; }
-    .smd-datepicker .display-date .month {
-      font-size: 22px;
-      line-height: 24px;
-      height: 24px;
-      // text-transform: uppercase;
-    }
-    .smd-datepicker .display-date .day {
-      margin: 6px 0;
-      line-height: 58px;
-      height: 58px;
-      font-size: 58px; }
-    .smd-datepicker .display-date .year {
-      font-size: 22px;
-      line-height: 24px;
-      height: 24px;
-      text-transform: uppercase; }
-    .smd-datepicker .display-date .time i {
-      margin-right: 5px; }
-  .smd-datepicker .toolbar {
-    position: relative;
-    height: 48px;
-    text-align: center; }
-    .smd-datepicker .toolbar .title {
-      position: absolute;
-      width: 100%;
-      top: 0;
-      left: 0;
-      line-height: 48px; }
-    .smd-datepicker .toolbar .toolbar-button {
-      position: absolute;
-      padding: 12px;
-      width: 48px;
-      height: 48px; }
-      .smd-datepicker .toolbar .toolbar-button:hover {
-        cursor: pointer; }
-      .smd-datepicker .toolbar .toolbar-button.left {
-        left: 0;
-        top: 0; }
-      .smd-datepicker .toolbar .toolbar-button.right {
-        right: 0;
-        top: 0; }
   .smd-datepicker .week {
     font-weight: 500;
     color: rgba(0, 0, 0, 0.5);
@@ -83,7 +19,7 @@
     line-height: 32px;
     text-align: center;
     padding: 8px 14px 0 14px;
-    background-color: $calendar-background;
+    background-color: $c-calendar;
     overflow: hidden;
     height: 100%; }
   .smd-datepicker .month-week {
@@ -105,7 +41,7 @@
       outline: none; }
   .smd-datepicker .day-button .selected {
     position: absolute;
-    background-color: $primary-color-dark;
+    background-color: $c-selected-date;
     height: 32px;
     width: 32px;
     opacity: 0;
@@ -116,9 +52,9 @@
     left: 50%;
     margin-left: -16px; }
   .smd-datepicker .day-button.is-current-day {
-    color: $selected-day-color !important; }
+    color: $c-selected-date-text !important; }
     .smd-datepicker .day-button.is-current-day .label {
-      color: $selected-day-color !important; }
+      color: $c-selected-date-text !important; }
   .smd-datepicker .day-button.is-current-day .selected {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -131,7 +67,7 @@ clear: both;}
     .smd-datepicker .window-actions div {
       display: inline-block;
       margin-right: 8px;
-      color: $primary-color;
+      color: $c-date-display;
       transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
       font-size: 14px;
       padding-top: 5px;
@@ -146,7 +82,7 @@ clear: both;}
       user-select: none;
       position: relative;
       overflow: hidden;
-      background-color: $calendar-background;
+      background-color: $c-calendar;
       line-height: 36px;
       min-width: 88px;
       padding: 0;
@@ -186,8 +122,9 @@ clear: both;}
         line-height: 40px;
         border-radius: 6px; }
       .smd-datepicker .smd-month-selector .datetime-picker-button.selected span, .smd-datepicker .smd-year-selector .datetime-picker-button.selected span {
-        background-color: $primary-color-dark;
-        color: $primary-text-color; }
+        background-color: $c-selected-date;
+        // color: $primary-text-color;
+      }
 
         .smd-datepicker .datetime-picker-button {
           position: relative;
@@ -205,7 +142,7 @@ clear: both;}
             outline: none; }
         .smd-datepicker .datetime-picker-button .selected {
           position: absolute;
-          background-color: $primary-color-dark;
+          background-color: $c-selected-date;
           height: 32px;
           width: 32px;
           opacity: 0;
@@ -216,30 +153,30 @@ clear: both;}
           left: 50%;
           margin-left: -16px; }
 
-  .is-portrait .smd-datepicker .header {
+  .is-portrait .smd-datepicker__header {
     display: none; }
-  .is-portrait .smd-datepicker .display-date {
+  .is-portrait .smd-datepicker__display-date {
     padding: 5px 0; }
-  .is-portrait .smd-datepicker .display-date .month {
+  .is-portrait .smd-datepicker__display-date .month {
     font-size: 20px;
     line-height: 20px;
     height: 20px;
     display: inline-block;
     vertical-align: middle; }
-  .is-portrait .smd-datepicker .display-date .year {
+  .is-portrait .smd-datepicker__display-date .year {
     display: inline-block;
     vertical-align: middle;
     font-size: 20px;
     line-height: 20px;
     height: 20px; }
-  .is-portrait .smd-datepicker .display-date .day {
+  .is-portrait .smd-datepicker__display-date .day {
     margin: 0;
     font-size: 20px;
     line-height: 20px;
     height: 20px;
     display: inline-block;
     vertical-align: middle; }
-  .is-portrait .smd-datepicker .toolbar {
+  .is-portrait .smd-datepicker .smd-calendar-toolbar {
     height: 30px; }
   .is-portrait .smd-datepicker .day-button {
     line-height: 28px; }
@@ -251,7 +188,7 @@ clear: both;}
     width: 450px;
     position: relative;
   display: flex;}
-    .is-landscape .smd-datepicker .header {
+    .is-landscape .smd-datepicker__header {
       position: absolute;
       left: 0;
       right: 0;
@@ -268,7 +205,7 @@ clear: both;}
       top: 0;
       bottom: 0;
     }
-    .is-landscape .display-date {
+    .is-landscape .smd-datepicker__display-date {
       top: 32px;
       bottom: 0;
       height: 100%;
@@ -300,7 +237,7 @@ h1 i {
   margin-right: 10px; }
 
 a {
-  color: $primary-color-dark; }
+  color: $c-link; }
 
 .content {
   padding: 20px; }
@@ -323,15 +260,15 @@ a {
     padding: 10px 5px; }
 
 .week .day {
-  color: $week-heading-color;
+  color: $c-weekday-heading;
 }
 
 .toolbar, .time-column, .day-button .label, .datetime-picker-button  {
-  color: $day-color !important;
+  color: $c-day-text !important;
 }
 
 .toolbar-button path {
-  fill: $day-color;
+  fill: $c-day-text;
 }
 
 
@@ -358,7 +295,6 @@ a {
 
   .calendar-icon::after {
     content: 'grid_on';
-    color: $icon-color;
   }
 
 
@@ -384,37 +320,32 @@ a {
 
     .clock-icon::after {
       content: 'access_time';
-      color: $icon-color;
     }
 
 .smd-datepicker--selecting-date {
   .month-day .month, .month-day .day, .year, .calendar-icon::after {
-    color: $icon-color;
+    color: $c-date-display-in-context-text;
   }
 
   .time-text, .clock-icon::after {
-    color: $secondary-color;
+    color: $c-date-diplay-no-context-text;
   }
 }
 
 
 .smd-datepicker--selecting-time {
   .month-day .month, .month-day .day, .year, .calendar-icon::after {
-    color: $secondary-color;
+    color: $c-date-diplay-no-context-text;
   }
 
   .time-text, .clock-icon::after {
-    color: $icon-color;
+    color: $c-date-display-in-context-text;
   }
 }
 
 .time-bar {
-  margin-top: 36px;
-}
-.time-text {
-  margin-top: -5px;
-  font-size: 25px;
-  // margin-top: .2em;
+  margin-top: 24px;
+  // margin-bottom:
 }
 
 .month-day .month, .year, .month-day .day {
@@ -425,13 +356,44 @@ a {
   margin-bottom: 12px;
 }
 
+.time-bar .time-text {
+  text-align: center;
+  font-size: 25px;
+}
+
 .time-bar__icons {
-  display: absolute;
+  display: flex;
   width: 100%;
-  background: red;
+  margin-top: 12px;
 
   .calendar-icon {
-    position: absolute;
-    left: 0;
+    // align-content: flex-start;
+  }
+
+  .clock-icon {
+    margin-left: auto;
+  }
+}
+
+.is-landscape {
+  .time-bar__icons {
+    width: 100%;
+    align-self: flex-end;
+    // position: absolute;
+    margin-top: 120px;
+    .calendar-icon {
+      align-content: flex-end;
+    }
+
+    .time-text {
+      order: -1;
+      align-self: center;
+      flex-grow: stretch;
+      flex: 1;
+    }
+
+    .clock-icon {
+      margin-left: auto;
+    }
   }
 }

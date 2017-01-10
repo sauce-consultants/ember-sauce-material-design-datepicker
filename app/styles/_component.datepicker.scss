@@ -1,0 +1,56 @@
+.smd-datepicker {
+  background: $c-calendar;
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.25);
+  width: 280px;
+  font-family: sans-serif;
+  margin: 0 auto;
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+  display: flex;
+
+  &__header {
+    font-size: 13px;
+    height: 32px;
+    line-height: 32px;
+    background-color: $c-date-display-header;
+    color: $c-date-display-header-text;
+    border-radius: 2px 2px 0 0;
+    text-align: center;
+  }
+
+  &__display-date {
+    padding: 16px 0;
+    background-color: $c-date-display;
+    text-align: center;
+
+    .month {
+      font-size: 22px;
+      line-height: 24px;
+      height: 24px;
+    }
+
+    .day {
+      margin: 6px 0;
+      line-height: 58px;
+      height: 58px;
+      font-size: 58px;
+    }
+
+    .year {
+      font-size: 22px;
+      line-height: 24px;
+      height: 24px;
+      text-transform: uppercase;
+    }
+
+    .time i {
+      margin-right: 5px;
+    }
+
+  }
+
+}

@@ -10,7 +10,7 @@ export default Ember.Component.extend(Setup, {
   layout: layout,
 
   tagName: 'div',
-  classNames: ['toolbar'],
+  classNames: ['smd-calendar-toolbar'],
 
   actions: {
 

@@ -1,0 +1,20 @@
+$c-date-display: #00bcd4;
+$c-selected-date: darken($c-date-display, 5);
+$c-selected-date-text: #fff;
+$c-date-display-header: darken($c-date-display, 5);
+$c-date-display-header-text: #fff;
+$c-date-display-in-context-text: #fff;
+$c-date-diplay-no-context-text: rgba( #fff, .7 );
+$c-calendar: #fff;
+$c-weekday-heading: #bcbcbc;
+$c-day-text: #000;
+$c-link: darken($c-date-display, 5);
+
+// $c-date-display: #D500F9;
+// $c-date-display-header: darken(#D500F9, 10);
+// $c-calendar: #212121;
+// $c-date-diplay-no-context-text: #ea80fc;
+// $c-weekday-heading: #bcbcbc;
+// $c-icons: #fff;
+// $c-date-display-header-text: #fff;
+// $c-day-text: #fff;
