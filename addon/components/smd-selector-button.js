@@ -31,6 +31,12 @@ export default Ember.Component.extend(Setup, {
     }
   }),
 
+  registerComponent: Ember.on('didInsertElement', function () {
+    if (this.get('selected')) {
+      this.attrs.onRegister(this.get('elementId'), this);
+    }
+  }),
+
   actions: {
 
     changeYear: function(delta) {

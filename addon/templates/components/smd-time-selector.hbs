@@ -1,9 +1,9 @@
 <div class="time-column">
   <div class="time-column__title title">Hour</div>
-  <div class="time-options">
+  <div class="time-options time-options--hours">
     {{#each hours as |hour|}}
       <div class="time-option">
-        {{ smd-selector-button label=hour action='setHour' params=hour selectedValue=selectedHour for=this leftPad=true }}
+        {{ smd-selector-button onRegister=(action "scrollToSelectedHour") label=hour action='setHour' params=hour selectedValue=selectedHour for=this leftPad=true }}
       </div>
     {{/each}}
   </div>
@@ -11,10 +11,10 @@
 
 <div class="time-column">
   <div class="time-column__title title">Minute</div>
-  <div class="time-options">
+  <div class="time-options time-options--minutes">
     {{#each minutes as |minute|}}
       <div class="time-option">
-        {{ smd-selector-button label=minute action='setMinute' selectedValue=selectedMinute params=minute for=this leftPad=true }}
+        {{ smd-selector-button onRegister=(action "scrollToSelectedMinute") label=minute action='setMinute' selectedValue=selectedMinute params=minute for=this leftPad=true }}
       </div>
     {{/each}}
   </div>

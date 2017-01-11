@@ -31,8 +31,8 @@ export default Ember.Component.extend(Setup, {
     var hours = date.getHours();
     var minutes = date.getMinutes();
     var period = hours >= 12 ? 'pm' : 'am';
-    hours = hours % 12;
-    hours = hours ? hours : 12;
+    // hours = hours;
+    // hours = hours ? hours : 12;
     minutes = minutes < 10 ? '0'+minutes : minutes;
 
     this.setProperties({
@@ -44,6 +44,23 @@ export default Ember.Component.extend(Setup, {
   }),
 
   actions: {
+
+    scrollToSelectedHour: function(id) {
+      var myOffset = this.$().offset().top;
+      var hourOffset = this.$("#" + id).offset().top;
+      var topOffset = hourOffset - myOffset;
+      this.$(".time-options--hours").scrollTop(topOffset  - 125);
+    },
+
+    scrollToSelectedMinute: function(id) {
+      var myOffset = this.$().offset().top;
+      var minuteOffset = this.$("#" + id).offset().top;
+      var topOffset = minuteOffset - myOffset;
+      console.log(minuteOffset);
+      console.log(myOffset);
+      console.log(topOffset);
+      this.$(".time-options--minutes").scrollTop(topOffset - 125);
+    },
 
     setHour: function(value) {
       get(this, 'parent').send('changeHour', value);
