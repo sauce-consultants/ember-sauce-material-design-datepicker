@@ -39,7 +39,7 @@
       color: #000; }
     .smd-datepicker .day-button:focus {
       outline: none; }
-  .smd-datepicker .day-button .selected {
+  .smd-datepicker .day-button .selected, .datetime-picker-button .selected {
     position: absolute;
     background-color: $c-selected-date;
     height: 32px;
@@ -111,18 +111,36 @@ clear: both;}
   .smd-datepicker .smd-month-selector, .smd-datepicker .smd-year-selector {
     height: 100%;
     overflow: hidden; }
-    .smd-datepicker .smd-month-selector .datetime-picker-button, .smd-datepicker .smd-year-selector .datetime-picker-button {
+    .smd-datepicker .smd-month-selector .datetime-picker-button,
+    .smd-datepicker .smd-year-selector .datetime-picker-button {
       float: left;
       width: 25%;
       text-align: center;
       margin-bottom: 10px; }
-      .smd-datepicker .smd-month-selector .datetime-picker-button span, .smd-datepicker .smd-year-selector .datetime-picker-button span {
+
+      .smd-datepicker .time-options .datetime-picker-button {
+        width: 25%;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .smd-datepicker .smd-month-selector .datetime-picker-button span,
+      .smd-datepicker .smd-year-selector .datetime-picker-button span {
         width: 80%;
         display: block;
         margin: 0 auto;
         line-height: 40px;
         border-radius: 6px; }
-      .smd-datepicker .smd-month-selector .datetime-picker-button.selected span, .smd-datepicker .smd-year-selector .datetime-picker-button.selected span {
+
+        .smd-datepicker .time-options .datetime-picker-button span {
+          width: 32px;
+          height: 32px;
+          display: block;
+          border-radius: 50%;
+        }
+      .smd-datepicker .smd-month-selector .datetime-picker-button.selected span,
+      .smd-datepicker .smd-year-selector .datetime-picker-button.selected span,
+      .smd-datepicker .time-options .datetime-picker-button.selected span,
+       {
         background-color: $c-selected-date;
         color: $c-selected-date-text;
       }

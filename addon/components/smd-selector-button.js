@@ -12,9 +12,24 @@ export default Ember.Component.extend(Setup, {
   classNames: ['datetime-picker-button'],
   classNameBindings: ['selected'],
 
+  selected: Ember.computed('selectedValue', 'params', function(){
+    return get(this, 'selectedValue') == get(this, 'params');
+  }),
+
   click: function() {
     get(this, 'for').send(get(this, 'action'), get(this, 'params'));
   },
+
+  displayValue: Ember.computed('label', function() {
+    console.log('test');
+    var label = get(this, 'label');
+    var leftPad = get(this, 'leftPad');
+    if (label < 10 && leftPad) {
+      return '0' + label;
+    } else {
+      return label;
+    }
+  }),
 
   actions: {
 

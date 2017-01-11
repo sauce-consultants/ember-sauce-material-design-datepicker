@@ -3,7 +3,7 @@
   <div class="time-options">
     {{#each hours as |hour|}}
       <div class="time-option">
-        {{ smd-selector-button label=hour action='setHour' params=hour for=this }}
+        {{ smd-selector-button label=hour action='setHour' params=hour selectedValue=selectedHour for=this leftPad=true }}
       </div>
     {{/each}}
   </div>
@@ -14,7 +14,7 @@
   <div class="time-options">
     {{#each minutes as |minute|}}
       <div class="time-option">
-        {{ smd-selector-button label=minute action='setMinute' params=minute for=this }}
+        {{ smd-selector-button label=minute action='setMinute' selectedValue=selectedMinute params=minute for=this leftPad=true }}
       </div>
     {{/each}}
   </div>
