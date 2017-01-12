@@ -32,7 +32,9 @@ export default Ember.Component.extend(Setup, {
   }),
 
   registerComponent: Ember.on('didInsertElement', function () {
-    if (this.get('selected')) {
+    console.log('register component');
+    if (this.get('selected') && this.attrs.onRegister) {
+      console.log('on register');
       this.attrs.onRegister(this.get('elementId'), this);
     }
   }),
