@@ -24,11 +24,8 @@ export default Ember.Component.extend({
     var hours = d.getHours();
     var minutes = d.getMinutes();
     var ampm = hours >= 12 ? 'pm' : 'am';
-    // hours = hours % 12;
-    // hours = hours ? hours : 12;
     hours = hours < 10 ? '0'+hours : hours;
     minutes = minutes < 10 ? '0'+minutes : minutes;
-    // var strTime = hours + ':' + minutes + ' ' + ampm;
     var strTime = hours + ':' + minutes;
     return strTime;
 
@@ -71,9 +68,21 @@ export default Ember.Component.extend({
 
   }),
 
+  defaultHours: null,
+  defaultMinutes: null,
+
   initialState: on('init', function(){
 
     var d = new Date();
+
+    if (this.get('defaultHours') != null) {
+      d.setHours(this.get('defaultHours'));
+    }
+
+    if (this.get('defaultMinutes') != null) {
+      d.setMinutes(this.get('defaultMinutes'));
+    }
+
     var displayDate = DateTime.getFirstDayOfMonth(d);
     var nextMonth;
 
