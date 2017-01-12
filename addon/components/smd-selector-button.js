@@ -21,7 +21,6 @@ export default Ember.Component.extend(Setup, {
   },
 
   displayValue: Ember.computed('label', function() {
-    console.log('test');
     var label = get(this, 'label');
     var leftPad = get(this, 'leftPad');
     if (label < 10 && leftPad) {
@@ -32,9 +31,7 @@ export default Ember.Component.extend(Setup, {
   }),
 
   registerComponent: Ember.on('didInsertElement', function () {
-    console.log('register component');
     if (this.get('selected') && this.attrs.onRegister) {
-      console.log('on register');
       this.attrs.onRegister(this.get('elementId'), this);
     }
   }),

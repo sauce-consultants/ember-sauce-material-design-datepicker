@@ -67,10 +67,7 @@ export default Ember.Component.extend(Setup, {
   actions: {
 
     setMonth: function(params) {
-
-      console.log('month-view setMonth');
       get(this, 'parent').send('setMonth', params);
-
     }
 
   }

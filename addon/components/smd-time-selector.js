@@ -56,9 +56,7 @@ export default Ember.Component.extend(Setup, {
       var myOffset = this.$().offset().top;
       var minuteOffset = this.$("#" + id).offset().top;
       var topOffset = minuteOffset - myOffset;
-      console.log(minuteOffset);
-      console.log(myOffset);
-      console.log(topOffset);
+
       this.$(".time-options--minutes").scrollTop(topOffset - 125);
     },
 

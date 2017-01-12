@@ -117,7 +117,6 @@ export default Ember.Component.extend({
     },
 
     setMonth: function(params) {
-
       var newDate = DateTime.clone(get(this, '_displayDate'));
       newDate.setMonth(params.id);
 
@@ -130,9 +129,6 @@ export default Ember.Component.extend({
     },
 
     changeMonth: function(delta) {
-
-      console.log('changeMonth', delta);
-
       var newDate = DateTime.clone(get(this, '_displayDate'));
       newDate.setMonth(newDate.getMonth() + delta);
 
@@ -140,7 +136,6 @@ export default Ember.Component.extend({
         _displayDate: DateTime.getFirstDayOfMonth(newDate),
         _weekCount: DateTime.getWeekArray(newDate)
       });
-
     },
 
     changeYearRange: function(delta) {
@@ -159,14 +154,12 @@ export default Ember.Component.extend({
     },
 
     changeHour: function(delta) {
-
       var newDate = DateTime.clone(get(this, '_selectedDate'));
       newDate.setHours(delta);
 
       this.setProperties({
         _selectedDate: newDate
       });
-
     },
 
     changeMinute: function(delta) {
