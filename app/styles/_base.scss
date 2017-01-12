@@ -205,6 +205,7 @@ clear: both;}
     margin-left: -15px; }
   .is-landscape .smd-datepicker {
     width: 450px;
+    height: 350px;
     position: relative;
   display: flex;}
     .is-landscape .smd-datepicker__header {
@@ -238,6 +239,11 @@ clear: both;}
       .is-landscape .smd-datepicker .calendar-display {
         padding-left: 10px;
         display: table-cell;
+        // width: 280px;
+      }
+
+      .is-landscape .smd-datepicker .smd-time-selector {
+        width: 280px;
       }
     // .is-landscape .smd-datepicker .window-actions {
     //   position: absolute;
